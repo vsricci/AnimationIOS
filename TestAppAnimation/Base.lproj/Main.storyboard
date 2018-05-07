@@ -30,7 +30,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="836"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vVa-hY-hxl">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="432"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="832"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzi-hb-yFk">
                                                 <rect key="frame" x="8" y="8" width="359" height="190"/>
@@ -52,18 +52,18 @@
                                                     <action selector="tappedMyLists:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7JS-k8-hmy"/>
                                                 </connections>
                                             </button>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yLB-xn-E5F">
-                                                <rect key="frame" x="8" y="259" width="359" height="0.0"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yLB-xn-E5F">
+                                                <rect key="frame" x="8" y="259" width="359" height="400"/>
                                                 <subviews>
-                                                    <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7iO-tw-i2o">
-                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="0.0"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7iO-tw-i2o">
+                                                        <rect key="frame" x="16" y="0.0" width="327" height="400"/>
+                                                        <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="434" id="oAt-Zn-I5y">
-                                                                <rect key="frame" x="0.0" y="28" width="359" height="434"/>
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="71" id="oAt-Zn-I5y">
+                                                                <rect key="frame" x="0.0" y="28" width="327" height="71"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oAt-Zn-I5y" id="okV-lH-Jru">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="433.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="70.5"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                 </tableViewCellContentView>
                                                             </tableViewCell>
@@ -77,15 +77,15 @@
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="7iO-tw-i2o" secondAttribute="bottom" id="1du-d5-eN6"/>
                                                     <constraint firstAttribute="height" priority="750" constant="400" id="2Zo-fK-MIE"/>
-                                                    <constraint firstItem="7iO-tw-i2o" firstAttribute="top" secondItem="yLB-xn-E5F" secondAttribute="top" id="RYd-tB-JGL"/>
-                                                    <constraint firstItem="7iO-tw-i2o" firstAttribute="leading" secondItem="yLB-xn-E5F" secondAttribute="leading" id="g7n-6B-uVd"/>
-                                                    <constraint firstAttribute="trailing" secondItem="7iO-tw-i2o" secondAttribute="trailing" id="yCr-Zd-L0A"/>
+                                                    <constraint firstItem="7iO-tw-i2o" firstAttribute="top" secondItem="yLB-xn-E5F" secondAttribute="top" id="LqJ-p1-hd2"/>
+                                                    <constraint firstAttribute="bottom" secondItem="7iO-tw-i2o" secondAttribute="bottom" id="l6n-bq-Vtk"/>
+                                                    <constraint firstAttribute="trailing" secondItem="7iO-tw-i2o" secondAttribute="trailing" constant="16" id="xba-eJ-Qvq"/>
+                                                    <constraint firstItem="7iO-tw-i2o" firstAttribute="leading" secondItem="yLB-xn-E5F" secondAttribute="leading" constant="16" id="ykW-60-Ddm"/>
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFX-bO-NH1">
-                                                <rect key="frame" x="8" y="275" width="359" height="45"/>
+                                                <rect key="frame" x="8" y="675" width="359" height="45"/>
                                                 <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="p7y-F1-BJM"/>
@@ -97,7 +97,7 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sGW-1X-W1A">
-                                                <rect key="frame" x="8" y="320" width="359" height="0.0"/>
+                                                <rect key="frame" x="8" y="720" width="359" height="0.0"/>
                                                 <subviews>
                                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7J-Wb-1ze">
                                                         <rect key="frame" x="16" y="0.0" width="327" height="0.0"/>
@@ -233,7 +233,7 @@
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AD3-hl-im6">
-                                                <rect key="frame" x="8" y="335" width="359" height="45"/>
+                                                <rect key="frame" x="8" y="735" width="359" height="45"/>
                                                 <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="zaE-05-Hqp"/>
@@ -244,19 +244,277 @@
                                                     <action selector="tappedCreateLists:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6ks-Hg-98X"/>
                                                 </connections>
                                             </button>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uvm-5K-9OE">
-                                                <rect key="frame" x="8" y="380" width="359" height="0.0"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Uvm-5K-9OE">
+                                                <rect key="frame" x="8" y="780" width="359" height="0.0"/>
                                                 <subviews>
                                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UkZ-6u-sU1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="0.0"/>
-                                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <rect key="frame" x="16" y="0.0" width="327" height="0.0"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Criar uma nova lista" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAi-OH-lec">
+                                                                <rect key="frame" x="0.0" y="20" width="327" height="19"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="16"/>
+                                                                <color key="textColor" red="0.25882352939999997" green="0.2901960784" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bti-X8-n64">
+                                                                <rect key="frame" x="0.0" y="46" width="327" height="1"/>
+                                                                <color key="backgroundColor" red="0.89795058969999997" green="0.89810127019999997" blue="0.89793068170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="1" id="ADN-x6-MLR"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="geU-gf-5Oz">
+                                                                <rect key="frame" x="0.0" y="141" width="327" height="54"/>
+                                                                <subviews>
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome do organizador(a)" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xSh-NH-Yg0" customClass="GiftListsTextField" customModule="PernambucanasVarejo" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="40"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="40" id="JGo-nU-0Od"/>
+                                                                        </constraints>
+                                                                        <color key="textColor" red="0.25882352939999997" green="0.2901960784" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="underLineWidth">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="underLineColor">
+                                                                                <color key="value" red="0.76862745099999996" green="0.76862745099999996" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                                <color key="value" red="0.25882352939999997" green="0.2901960784" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </textField>
+                                                                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite um nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fo4-bT-dUn">
+                                                                        <rect key="frame" x="0.0" y="42" width="327" height="12"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="10"/>
+                                                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="Fo4-bT-dUn" firstAttribute="top" secondItem="xSh-NH-Yg0" secondAttribute="bottom" constant="2" id="EAx-81-eIf"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="xSh-NH-Yg0" secondAttribute="trailing" id="LUz-ye-PPX"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="Fo4-bT-dUn" secondAttribute="bottom" id="XjI-M0-fEB"/>
+                                                                    <constraint firstItem="xSh-NH-Yg0" firstAttribute="top" secondItem="geU-gf-5Oz" secondAttribute="top" id="Z3v-8k-8WM"/>
+                                                                    <constraint firstItem="Fo4-bT-dUn" firstAttribute="leading" secondItem="geU-gf-5Oz" secondAttribute="leading" id="jhv-9N-nvc"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="Fo4-bT-dUn" secondAttribute="trailing" id="kSM-Tg-Iap"/>
+                                                                    <constraint firstItem="xSh-NH-Yg0" firstAttribute="leading" secondItem="geU-gf-5Oz" secondAttribute="leading" id="quj-R3-Izo"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kz5-xW-B8T">
+                                                                <rect key="frame" x="0.0" y="67" width="327" height="54"/>
+                                                                <subviews>
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome do evento" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7az-9k-bks" customClass="GiftListsTextField" customModule="PernambucanasVarejo" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="40"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="40" id="Sey-E9-2F5"/>
+                                                                        </constraints>
+                                                                        <color key="textColor" red="0.25882352939999997" green="0.2901960784" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="underLineWidth">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="underLineColor">
+                                                                                <color key="value" red="0.76862745099999996" green="0.76862745099999996" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                                <color key="value" red="0.25882352939999997" green="0.2901960784" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </textField>
+                                                                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite o nome do evento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzG-hN-qDR">
+                                                                        <rect key="frame" x="0.0" y="42" width="327" height="12"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="10"/>
+                                                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="bottom" secondItem="zzG-hN-qDR" secondAttribute="bottom" id="3wQ-bK-655"/>
+                                                                    <constraint firstItem="7az-9k-bks" firstAttribute="top" secondItem="kz5-xW-B8T" secondAttribute="top" id="C5i-bn-9eU"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="7az-9k-bks" secondAttribute="trailing" id="QvI-Tb-fgC"/>
+                                                                    <constraint firstItem="zzG-hN-qDR" firstAttribute="top" secondItem="7az-9k-bks" secondAttribute="bottom" constant="2" id="U7L-eS-mqk"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="zzG-hN-qDR" secondAttribute="bottom" id="VhK-4Y-PGD"/>
+                                                                    <constraint firstItem="zzG-hN-qDR" firstAttribute="leading" secondItem="kz5-xW-B8T" secondAttribute="leading" id="YU6-Vw-alc"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="zzG-hN-qDR" secondAttribute="trailing" id="hCY-Wh-Dal"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="zzG-hN-qDR" secondAttribute="trailing" id="m2K-cu-YnL"/>
+                                                                    <constraint firstItem="7az-9k-bks" firstAttribute="leading" secondItem="kz5-xW-B8T" secondAttribute="leading" id="wxl-cG-60s"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HK0-2C-Wb0">
+                                                                <rect key="frame" x="0.0" y="67" width="327" height="54"/>
+                                                                <subviews>
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Selecione o tipo de lista" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FFY-xa-B8E" customClass="GiftListsTextFieldWithButton" customModule="PernambucanasVarejo" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="40"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="40" id="gIM-xW-Mny"/>
+                                                                        </constraints>
+                                                                        <color key="textColor" red="0.25882352939999997" green="0.2901960784" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="underLineWidth">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="underLineColor">
+                                                                                <color key="value" red="0.76862745099999996" green="0.76862745099999996" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                                <color key="value" red="0.25882352939999997" green="0.2901960784" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="image" value="ic_menuArrow"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </textField>
+                                                                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione o tipo de lista" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BG7-Mx-EaR">
+                                                                        <rect key="frame" x="0.0" y="42" width="307" height="12"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="10"/>
+                                                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="BG7-Mx-EaR" firstAttribute="leading" secondItem="HK0-2C-Wb0" secondAttribute="leading" id="EZw-Bz-F7y"/>
+                                                                    <constraint firstItem="FFY-xa-B8E" firstAttribute="top" secondItem="HK0-2C-Wb0" secondAttribute="top" id="F8K-Qs-I23"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="BG7-Mx-EaR" secondAttribute="trailing" constant="20" id="LXC-Wc-Pfa"/>
+                                                                    <constraint firstItem="BG7-Mx-EaR" firstAttribute="top" secondItem="FFY-xa-B8E" secondAttribute="bottom" constant="2" id="RCn-dc-cft"/>
+                                                                    <constraint firstItem="FFY-xa-B8E" firstAttribute="leading" secondItem="HK0-2C-Wb0" secondAttribute="leading" id="YNv-GE-X9c"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="BG7-Mx-EaR" secondAttribute="bottom" id="gt0-LE-n0o"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="FFY-xa-B8E" secondAttribute="trailing" id="sAS-lK-kRG"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome do(a) parceiro(a) (opcional)" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6se-El-hEp" customClass="GiftListsTextField" customModule="PernambucanasVarejo" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="-202" width="327" height="40"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="zix-iy-doJ"/>
+                                                                </constraints>
+                                                                <color key="textColor" red="0.25882352939999997" green="0.2901960784" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="underLineWidth">
+                                                                        <real key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="underLineColor">
+                                                                        <color key="value" red="0.76862745099999996" green="0.76862745099999996" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                        <color key="value" red="0.25882352939999997" green="0.2901960784" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l74-cV-KSd">
+                                                                <rect key="frame" x="0.0" y="-136" width="327" height="54"/>
+                                                                <subviews>
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Data evento" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="R7o-T4-Wa2" customClass="GiftListsTextFieldWithButton" customModule="PernambucanasVarejo" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="40"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="40" id="ANi-Mq-WXu"/>
+                                                                        </constraints>
+                                                                        <color key="textColor" red="0.25882352939999997" green="0.2901960784" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="underLineWidth">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="underLineColor">
+                                                                                <color key="value" red="0.76862745099999996" green="0.76862745099999996" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                                <color key="value" red="0.25882352939999997" green="0.2901960784" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="image" value="ic_menuArrow"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </textField>
+                                                                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data inválida" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSh-jg-D2f">
+                                                                        <rect key="frame" x="0.0" y="42" width="327" height="12"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="10"/>
+                                                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="R7o-T4-Wa2" firstAttribute="top" secondItem="l74-cV-KSd" secondAttribute="top" id="06V-LZ-XCv"/>
+                                                                    <constraint firstItem="lSh-jg-D2f" firstAttribute="top" secondItem="R7o-T4-Wa2" secondAttribute="bottom" constant="2" id="ClU-W4-d6F"/>
+                                                                    <constraint firstItem="lSh-jg-D2f" firstAttribute="leading" secondItem="l74-cV-KSd" secondAttribute="leading" id="NYA-tO-o4D"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="R7o-T4-Wa2" secondAttribute="trailing" id="Q2d-4R-QoR"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="lSh-jg-D2f" secondAttribute="bottom" id="YPc-To-fio"/>
+                                                                    <constraint firstItem="lSh-jg-D2f" firstAttribute="top" secondItem="R7o-T4-Wa2" secondAttribute="bottom" constant="2" id="mqE-5s-pNk"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="lSh-jg-D2f" secondAttribute="trailing" id="rHl-YP-GKH"/>
+                                                                    <constraint firstItem="R7o-T4-Wa2" firstAttribute="leading" secondItem="l74-cV-KSd" secondAttribute="leading" id="wP5-QL-j0T"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRp-q4-KUR" customClass="GiftListsButton" customModule="PernambucanasVarejo" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="-66" width="327" height="50"/>
+                                                                <color key="backgroundColor" red="0.9731615186" green="0.9295209646" blue="0.50231713060000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="6OL-hZ-739"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="18"/>
+                                                                <state key="normal" title="Criar lista">
+                                                                    <color key="titleColor" red="0.14117647059999999" green="0.22352941179999999" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="HK0-2C-Wb0" firstAttribute="leading" secondItem="UkZ-6u-sU1" secondAttribute="leading" id="1BY-B3-Z2G"/>
+                                                            <constraint firstItem="sAi-OH-lec" firstAttribute="leading" secondItem="UkZ-6u-sU1" secondAttribute="leading" id="4ST-k5-crh"/>
+                                                            <constraint firstAttribute="trailing" secondItem="bti-X8-n64" secondAttribute="trailing" id="4qn-BG-tCN"/>
+                                                            <constraint firstItem="BRp-q4-KUR" firstAttribute="top" secondItem="l74-cV-KSd" secondAttribute="bottom" constant="16" id="AOw-aY-Pvf"/>
+                                                            <constraint firstAttribute="trailing" secondItem="geU-gf-5Oz" secondAttribute="trailing" id="BuE-o6-tWa"/>
+                                                            <constraint firstItem="kz5-xW-B8T" firstAttribute="top" secondItem="bti-X8-n64" secondAttribute="bottom" constant="20" id="CLP-FO-QF1"/>
+                                                            <constraint firstAttribute="trailing" secondItem="6se-El-hEp" secondAttribute="trailing" id="EqN-9w-dXx"/>
+                                                            <constraint firstAttribute="trailing" secondItem="HK0-2C-Wb0" secondAttribute="trailing" id="FnC-E5-4ue"/>
+                                                            <constraint firstItem="kz5-xW-B8T" firstAttribute="leading" secondItem="UkZ-6u-sU1" secondAttribute="leading" id="Nut-Ga-uzf"/>
+                                                            <constraint firstAttribute="trailing" secondItem="l74-cV-KSd" secondAttribute="trailing" id="O6J-tz-E5t"/>
+                                                            <constraint firstItem="6se-El-hEp" firstAttribute="leading" secondItem="UkZ-6u-sU1" secondAttribute="leading" id="Ov6-6Z-IiN"/>
+                                                            <constraint firstAttribute="trailing" secondItem="BRp-q4-KUR" secondAttribute="trailing" id="PNP-fX-Eh3"/>
+                                                            <constraint firstItem="geU-gf-5Oz" firstAttribute="top" secondItem="HK0-2C-Wb0" secondAttribute="bottom" constant="20" id="QXP-Kl-IJd"/>
+                                                            <constraint firstAttribute="bottom" secondItem="BRp-q4-KUR" secondAttribute="bottom" constant="16" id="QdS-AC-4Yp"/>
+                                                            <constraint firstItem="geU-gf-5Oz" firstAttribute="leading" secondItem="UkZ-6u-sU1" secondAttribute="leading" id="Rfc-N6-225"/>
+                                                            <constraint firstItem="l74-cV-KSd" firstAttribute="leading" secondItem="UkZ-6u-sU1" secondAttribute="leading" id="SbB-2w-SES"/>
+                                                            <constraint firstAttribute="trailing" secondItem="kz5-xW-B8T" secondAttribute="trailing" id="X4d-Fo-Egv"/>
+                                                            <constraint firstItem="bti-X8-n64" firstAttribute="top" secondItem="sAi-OH-lec" secondAttribute="bottom" constant="7" id="Xs7-OY-lzz"/>
+                                                            <constraint firstAttribute="trailing" secondItem="kz5-xW-B8T" secondAttribute="trailing" id="Z3M-Js-8d7"/>
+                                                            <constraint firstAttribute="trailing" secondItem="sAi-OH-lec" secondAttribute="trailing" id="Zhv-zj-ht3"/>
+                                                            <constraint firstItem="BRp-q4-KUR" firstAttribute="leading" secondItem="UkZ-6u-sU1" secondAttribute="leading" id="auN-2V-6fo"/>
+                                                            <constraint firstItem="sAi-OH-lec" firstAttribute="top" secondItem="UkZ-6u-sU1" secondAttribute="top" constant="20" id="iCB-1I-sxY"/>
+                                                            <constraint firstItem="kz5-xW-B8T" firstAttribute="leading" secondItem="UkZ-6u-sU1" secondAttribute="leading" id="iY3-fq-z7T"/>
+                                                            <constraint firstItem="HK0-2C-Wb0" firstAttribute="top" secondItem="bti-X8-n64" secondAttribute="bottom" constant="20" id="lO5-8S-SXM"/>
+                                                            <constraint firstItem="bti-X8-n64" firstAttribute="leading" secondItem="UkZ-6u-sU1" secondAttribute="leading" id="oCx-mb-P8N"/>
+                                                            <constraint firstItem="l74-cV-KSd" firstAttribute="top" secondItem="6se-El-hEp" secondAttribute="bottom" constant="26" id="w3D-zy-kuM"/>
+                                                        </constraints>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="UkZ-6u-sU1" secondAttribute="bottom" id="C97-Pe-z3p"/>
                                                     <constraint firstItem="UkZ-6u-sU1" firstAttribute="top" secondItem="Uvm-5K-9OE" secondAttribute="top" id="PJL-jv-wy9"/>
-                                                    <constraint firstItem="UkZ-6u-sU1" firstAttribute="leading" secondItem="Uvm-5K-9OE" secondAttribute="leading" id="d0Y-X3-JXm"/>
-                                                    <constraint firstAttribute="trailing" secondItem="UkZ-6u-sU1" secondAttribute="trailing" id="j6n-8L-Sww"/>
+                                                    <constraint firstItem="UkZ-6u-sU1" firstAttribute="leading" secondItem="Uvm-5K-9OE" secondAttribute="leading" constant="16" id="d0Y-X3-JXm"/>
+                                                    <constraint firstAttribute="trailing" secondItem="UkZ-6u-sU1" secondAttribute="trailing" constant="16" id="j6n-8L-Sww"/>
                                                     <constraint firstAttribute="height" priority="750" constant="404" id="kAs-3J-EpL"/>
                                                 </constraints>
                                             </stackView>
