@@ -13,6 +13,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var btnmyLists: UIButton!
     @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var stackSearchLists: UIStackView!
+    @IBOutlet weak var stackCreateLists: UIStackView!
+    @IBOutlet weak var serachView: UIView!
+    @IBOutlet weak var createView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var viewCustom: UIView!
     
@@ -149,6 +153,58 @@ class ViewController: UIViewController {
         sender.isSelected = !sender.isSelected
         
     }
+    
+    @IBAction func tappedSearchLists(_ sender: UIButton) {
+        if sender.isSelected {
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseIn, animations: {
+                //  self.addConstraints()
+               self.serachView.isHidden = true
+                print("clicked closed search lists")
+            }) { (resut) in
+                
+            }
+            
+        }
+        else {
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseOut, animations: {
+                //  self.updateContraints()
+                self.serachView.isHidden = false
+                print("clicked open search lists")
+                
+            }) { (resut) in
+                
+            }
+            
+        }
+        sender.isSelected = !sender.isSelected
+        
+    }
+    
+    @IBAction func tappedCreateLists(_ sender: UIButton) {
+        if sender.isSelected {
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseIn, animations: {
+                //  self.addConstraints()
+                self.createView.isHidden = true
+                print("clicked closed search lists")
+            }) { (resut) in
+                
+            }
+            
+        }
+        else {
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseOut, animations: {
+                //  self.updateContraints()
+                self.createView.isHidden = false
+                print("clicked open search lists")
+                
+            }) { (resut) in
+                
+            }
+            
+        }
+        sender.isSelected = !sender.isSelected
+        
+    }
 
 
 }
@@ -230,15 +286,20 @@ extension ViewController : UIScrollViewDelegate {
           //  print("using tableView scroll")
             
         }
-        if self.tableView.isHidden == true {
-            scrollView.contentSize = CGSize(width: self.view.bounds.size.width, height: 800)
+//        if self.tableView.isHidden == true {
+//            scrollView.contentSize = CGSize(width: self.view.bounds.size.width, height: 667)
+//        }
+         if self.serachView.isHidden == true && self.tableView.isHidden == true && self.createView.isHidden == true {
+            
+            scrollView.contentSize = CGSize(width: self.view.bounds.size.width, height: 667)
+            
         }
-        else {
-
-             //self.tableView.alwaysBounceVertical = true
-            scrollView.contentSize = CGSize(width: self.view.bounds.size.width, height: self.tableView.bounds.size.height+self.stackView.bounds.size.height+self.stackView.bounds.size.height-100)
+         else if self.tableView.isHidden == false && self.createView.isHidden == true && self.serachView.isHidden == true{
+             scrollView.contentSize = CGSize(width: self.view.bounds.size.width, height: self.tableView.bounds.size.height+self.stackView.bounds.size.height+self.stackCreateLists.bounds.size.height+self.createView.bounds.size.height+30)
         }
-        
+         else if self.tableView.isHidden == false && self.createView.isHidden == false && self.serachView.isHidden == false {
+            scrollView.contentSize = CGSize(width: self.view.bounds.size.width, height: self.tableView.bounds.size.height+self.stackView.bounds.size.height+self.stackCreateLists.bounds.size.height+self.createView.bounds.size.height-70)
+        }
     }
 }
 
