@@ -21,19 +21,29 @@ class ViewController: UIViewController {
     var heightConst: NSLayoutConstraint!
     var topConst2: NSLayoutConstraint!
     var bottomConst: NSLayoutConstraint!
+    
+    let screenHeight = UIScreen.main.bounds.height
+    let scrollViewContentHeight = 1200 as CGFloat
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-       self.tableView.isHidden = true
-       
+        scrollView.contentSize = CGSize(width: scrollViewContentHeight, height: scrollViewContentHeight)
+        self.tableView.contentSize = CGSize(width: self.tableView.frame.size.width, height: self.tableView.contentSize.height)
+       tableView.isHidden = true
+       scrollView.delegate = self
+        scrollView.alwaysBounceVertical = true
+        scrollView.bounces = true
+        tableView.bounces = false
+        //tableView.isScrollEnabled = false
+        
        // tableView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
         tableView.tableFooterView = UIView()
         tableView.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-
+       // scrollView.contentSize = CGSize(width: self.view.bounds.size.width, height: 1000)
 //        tableView.frame = CGRect(x: tableView.frame.origin.x, y: tableView.frame.origin.y, width: tableView.frame.size.width, height: tableView.contentSize.height)
         
     }
@@ -50,6 +60,24 @@ class ViewController: UIViewController {
     
     func getValues() {
         
+        self.valuesArray.append("Teste")
+        self.valuesArray.append("Teste")
+        self.valuesArray.append("Teste")
+        self.valuesArray.append("Teste")
+        self.valuesArray.append("Teste")
+        self.valuesArray.append("Teste")
+        self.valuesArray.append("Teste")
+        self.valuesArray.append("Teste")
+        self.valuesArray.append("Teste")
+        self.valuesArray.append("Teste")
+        self.valuesArray.append("Teste")
+        self.valuesArray.append("Teste")
+        self.valuesArray.append("Teste")
+        self.valuesArray.append("Teste")
+        self.valuesArray.append("Teste")
+        self.valuesArray.append("Teste")
+        self.valuesArray.append("Teste")
+        self.valuesArray.append("Teste")
         self.valuesArray.append("Teste")
         self.valuesArray.append("Teste")
         
@@ -158,6 +186,59 @@ extension UIView
         for subview in self.subviews as! [UIView] {
             subview.removeFromSuperview();
         }
+    }
+}
+
+extension ViewController : UIScrollViewDelegate {
+    
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        if scrollView.bounds.intersects(UIView().frame) == true {
+            //the UIView is within frame, use the UIScrollView's scrolling.
+            self.scrollView.contentOffset = scrollView.contentOffset
+            if tableView.contentOffset.y == 0 {
+                //tableViews content is at the top of the tableView.
+                
+                tableView.isUserInteractionEnabled = true
+                tableView.resignFirstResponder()
+                print("using scrollView scroll")
+               // scrollView.contentSize = CGSize(width: self.view.bounds.size.width, height: self.tableView.bounds.size.height+self.stackView.bounds.size.height+self.stackView.bounds.size.height-100)
+                
+            } else {
+                
+                //UIView is in frame, but the tableView still has more content to scroll before resigning its scrolling over to ScrollView.
+                
+                tableView.isUserInteractionEnabled = true
+                scrollView.resignFirstResponder()
+                //tableView.isScrollEnabled = true
+                //tableView.alwaysBounceVertical = true
+                self.tableView.contentSize = CGSize(width: self.tableView.frame.size.width, height: self.tableView.contentSize.height)
+                scrollView.contentSize = CGSize(width: self.view.bounds.size.width, height: self.tableView.bounds.size.height+self.stackView.bounds.size.height+self.stackView.bounds.size.height-100)
+                print("using tableView scroll")
+            }
+            
+        } else {
+            
+            //UIView is not in frame. Use tableViews scroll.
+            
+            tableView.isUserInteractionEnabled = true
+            scrollView.resignFirstResponder()
+            //tableView.isScrollEnabled = true
+            //tableView.alwaysBounceVertical = true
+            self.tableView.contentSize = CGSize(width: self.tableView.frame.size.width, height: self.tableView.contentSize.height)
+          //  print("using tableView scroll")
+            
+        }
+        if self.tableView.isHidden == true {
+            scrollView.contentSize = CGSize(width: self.view.bounds.size.width, height: 800)
+        }
+        else {
+
+             //self.tableView.alwaysBounceVertical = true
+            scrollView.contentSize = CGSize(width: self.view.bounds.size.width, height: self.tableView.bounds.size.height+self.stackView.bounds.size.height+self.stackView.bounds.size.height-100)
+        }
+        
     }
 }
 
